@@ -1,1 +1,43 @@
-<div>it works!</div>
+<!--<div ng-repeat="f in $ctrl.data">-->
+    <!--<span>{{f.food_name}} - {{f.food_type}}</span>-->
+    <!--<img ng-src="{{f.food_picture}}" alt="{{f.food_name}}" />-->
+<!--</div>-->
+
+<!--<div>It works!</div>-->
+<!--<md-content class="md-padding" layout-xs="column" layout="row">-->
+
+<div layout="row">
+    <div flex-xs flex-gt-xs="50" layout="row">
+      <md-card ng-repeat="f in $ctrl.pies" md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{f.food_name}}</span>
+            <span class="md-subhead">{{f.food_type}}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"><img ng-src="{{f.food_picture}}"></div>
+          </md-card-title-media>
+        </md-card-title>
+          <md-card-actions>
+              <button ng-click="$ctrl.clickMe(f.food_name)">Click Me!</button>
+          </md-card-actions>
+      </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="50" layout="column">
+      <md-card ng-repeat="f in $ctrl.sandwich" md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{f.food_name}}</span>
+            <span class="md-subhead">{{f.food_type}}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"><img ng-src="{{f.food_picture}}"></div>
+          </md-card-title-media>
+        </md-card-title>
+          <md-card-actions>
+              <button ng-click="$ctrl.clickMe(f.food_name)">Click Me!</button>
+          </md-card-actions>
+      </md-card>
+    </div>
+    </div>
+  </md-content>
